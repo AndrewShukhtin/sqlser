@@ -12,6 +12,6 @@ script:
   - go mod vendor
   - go get -u github.com/goware/modvendor
   - modvendor -copy="**/*.c **/*.h **/*.proto" -v
-  - go test -coverprofile=coverage.txt -covermode=atomic ./...
+  - go test -coverprofile=coverage.txt ./...
 after_success:
   - bash <(curl -s https://codecov.io/bash)
