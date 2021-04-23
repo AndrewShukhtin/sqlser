@@ -7,7 +7,7 @@ go:
 env:
   - GO111MODULE=on
   global:
-    - CODECOV_TOKEN='418a925c-5d84-442e-8e6b-3f0bad6bc329'
+    - CODECOV_TOKEN='86e6fe78-f9a9-405d-babc-ecc289950f1a'
 script:
   - go mod vendor
   - go get -u github.com/goware/modvendor
