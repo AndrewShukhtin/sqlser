@@ -5,8 +5,7 @@ language: go
 go:
   - 1.15.x
 env:
-  global:
-    - CODECOV_TOKEN='86e6fe78-f9a9-405d-babc-ecc289950f1a'
+  - CODECOV_TOKEN='86e6fe78-f9a9-405d-babc-ecc289950f1a'
   - GO111MODULE=on
 script:
   - go mod vendor
