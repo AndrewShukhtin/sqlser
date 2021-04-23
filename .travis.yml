@@ -1,0 +1,17 @@
+arch:
+  - amd64
+
+language: go
+go:
+  - 1.15.x
+env:
+  - GO111MODULE=on
+  global:
+    - CODECOV_TOKEN='418a925c-5d84-442e-8e6b-3f0bad6bc329'
+script:
+  - go mod vendor
+  - go get -u github.com/goware/modvendor
+  - modvendor -copy="**/*.c **/*.h **/*.proto" -v
+  - go test -coverprofile=coverage.txt -covermode=atomic ./...
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
